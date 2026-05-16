@@ -57,5 +57,5 @@ variable "zone_id" {
 }
 
 variable "domain_name" {
-  default = "venaws.site"
+  default = "venaws.in"
 }
