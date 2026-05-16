@@ -1,6 +1,6 @@
 variable "ami_id" {
   type        = string
-  default     = "ami-09c813fb71547fc4f"
+  default     = "ami-0f88e80871fd81e91"
   description = "AMI ID of joindevops RHEL9"
 }
 
@@ -11,13 +11,13 @@ variable "instance_type" {
 variable "ec2_tags" {
     type = map(string)
     default = {
-        Name = "Roboshop"
+        Name = "HelloWorld"
         Purpose = "variables-demo"
     }
 }
 
 variable "sg_name" {
-    default = "allow-all"
+    default = "allow-all1"
 }
 
 variable "sg_description" {
@@ -41,28 +41,5 @@ variable "cidr_blocks" {
 variable "sg_tags" {
     default = {
         Name = "allow-all"
-    }
-}
-
-variable "environment" {
-    default = "prod"
-}
-
-variable "instances" {
-    default = ["mongodb", "redis", "mysql", "rabbitmq"]
-}
-
-variable "zone_id" {
-  default = "Z0951938Q9N7C0J21J7R"
-}
-
-variable "domain_name" {
-  default = "venaws.in"
-}
-
-variable "common_tags"{
-    default = {
-        Project = "roboshop"
-        Terraform = "true"
     }
 }
